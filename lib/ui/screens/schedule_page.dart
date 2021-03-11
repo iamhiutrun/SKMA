@@ -2,26 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
+class SchedulePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<SchedulePage> {
   CalendarController _controller;
   TextStyle dayStyle(FontWeight fontWeight) {
     return TextStyle(color: Color(0xff30384c), fontWeight: fontWeight);
@@ -156,36 +142,36 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Positioned(
                       bottom: 0,
-                        height: 300,
+                      height: 300,
                       width: MediaQuery.of(context).size.width,
                       child: Container(
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: FractionalOffset.topCenter,
-                            end: FractionalOffset.bottomCenter,
-                            colors:[
-                              Color(0xff30384c).withOpacity(0),
-                              Color(0xff30384c)
-                            ],
-                            stops: [
-                              0.0,
-                              1.0
-                            ]
-                          )
+                            gradient: LinearGradient(
+                                begin: FractionalOffset.topCenter,
+                                end: FractionalOffset.bottomCenter,
+                                colors:[
+                                  Color(0xff30384c).withOpacity(0),
+                                  Color(0xff30384c)
+                                ],
+                                stops: [
+                                  0.0,
+                                  1.0
+                                ]
+                            )
                         ),
                       ),
                     ),
                     Positioned(
                       bottom: 40,
-                        right: 20,
-                        child: Container(
-                          padding: EdgeInsets.all((20)),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: Color(0xffb038f1),
-                          ),
-                          child: Text("+", style: TextStyle(color: Colors.white, fontSize: 25),),
+                      right: 20,
+                      child: Container(
+                        padding: EdgeInsets.all((20)),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Color(0xffb038f1),
                         ),
+                        child: Text("+", style: TextStyle(color: Colors.white, fontSize: 25),),
+                      ),
                     ),
                   ],
                 ),

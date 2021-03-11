@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:SKMA/main.dart';
+import 'file:///C:/Users/luong/OneDrive%20-%20actvn.edu.vn/Documents/Flutter/SKMA/lib/ui/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
